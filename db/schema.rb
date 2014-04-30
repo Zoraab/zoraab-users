@@ -11,9 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20140429181314) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "entries", force: true do |t|
+    t.string   "recipient"
+    t.string   "recipient_name"
+    t.text     "gift_note"
+    t.string   "prefs"
+    t.integer  "qty"
+    t.string   "payment"
+    t.integer  "term"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end
