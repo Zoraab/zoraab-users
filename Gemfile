@@ -39,6 +39,8 @@ gem 'spring',        group: :development
 
 gem 'rack-cors', :require => 'rack/cors'
 
+gem 'newrelic_rpm'
+
 # Use unicorn as the app server
 # gem 'unicorn'
 
