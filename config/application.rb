@@ -10,7 +10,7 @@ module ZoraabUsers
   class Application < Rails::Application
     config.middleware.use Rack::Cors do
       allow do
-        origins 'zoraab-dev.myshopify.com'
+        origins 'zoraab-dev.myshopify.com', 'zoraab.com', 'zoraab.myshopify.com'
         resource '*', :headers => :any, :methods => [:get, :post, :options]
       end
     end
