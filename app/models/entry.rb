@@ -23,7 +23,7 @@ class Entry < ActiveRecord::Base
     elsif self.payment =='once'
       url = upfront_url
     end
-    url + "?reference#{self.id}"
+    url + "?reference=#{self.id}"
   end
   
   def monthly_url
