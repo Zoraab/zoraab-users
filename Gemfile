@@ -41,6 +41,8 @@ gem 'rack-cors', :require => 'rack/cors'
 
 gem 'newrelic_rpm'
 
+gem 'foundation-rails'
+
 
 group :test, :development do
   gem 'dotenv-rails'
