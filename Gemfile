@@ -41,6 +41,11 @@ gem 'rack-cors', :require => 'rack/cors'
 
 gem 'newrelic_rpm'
 
+
+group :test, :development do
+  gem 'dotenv-rails'
+end
+
 # Use unicorn as the app server
 # gem 'unicorn'
 
