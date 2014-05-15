@@ -1,5 +1,5 @@
 class EntriesController < ApplicationController
-  skip_before_filter  :verify_authenticity_token, :only => [:new,:show]
+  skip_before_filter  :verify_authenticity_token, :only => :new
   def index
     @entries = Entry.reorder("created_at DESC").page(params[:page]).per_page(50)
   end
