@@ -1,7 +1,7 @@
 class EntriesController < ApplicationController
   skip_before_filter  :verify_authenticity_token, :only => :new
   def index
-    @entries = Entry.all
+    @entries = Entry.paginate(:page=>params[:page], :per_page=>50)
   end
   
   def new

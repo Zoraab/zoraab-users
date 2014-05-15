@@ -43,6 +43,8 @@ gem 'newrelic_rpm'
 
 gem 'foundation-rails'
 
+gem 'will_paginate', '~> 3.0'
+
 
 group :test, :development do
   gem 'dotenv-rails'
