@@ -1,6 +1,7 @@
 class EntriesController < ApplicationController
   skip_before_filter  :verify_authenticity_token, :only => :new
   def index
+    @entries = Entry.all
   end
   
   def new

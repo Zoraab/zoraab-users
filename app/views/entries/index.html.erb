@@ -1,0 +1,30 @@
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Date</th>
+      <th>Recipient</th>
+      <th>Prefs</th>
+      <th>Qty</th>
+      <th>Pmt</th>
+      <th>Term</th>
+      <th>Name</th>
+      <th>Note</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @entries.each do |entry| %>
+    <tr>
+      <td><%= entry.id %></td>
+      <td><%= entry.created_at.strftime('%m/%d/%y') %></td>
+      <td><%= entry.recipient %></td>
+      <td><%= entry.prefs %></td>
+      <td><%= entry.qty %></td>
+      <td><%= entry.payment %></td>
+      <td><%= entry.term %></td>
+      <td><%= entry.recipient_name %></td>
+      <td><%= entry.gift_note %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
