@@ -2,6 +2,8 @@ class Entry < ActiveRecord::Base
   serialize :prefs, Array
   def self.new_submission(form)
     entry = Entry.new
+    entry.name = form['name']
+    entry.email = form['email']
     entry.recipient = form['recipient']
     if entry.recipient == 'gift'
       entry.recipient_name = form['recipient_name']
