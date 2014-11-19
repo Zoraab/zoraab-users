@@ -6,12 +6,15 @@
     <tr>
       <th>ID</th>
       <th>Date</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Type</th>
       <th>Recipient</th>
       <th>Prefs</th>
       <th>Qty</th>
       <th>Pmt</th>
       <th>Term</th>
-      <th>Name</th>
+      <th>Rec Name</th>
       <th>Note</th>
     </tr>
   </thead>
@@ -20,6 +23,9 @@
     <tr>
       <td><%= entry.id %></td>
       <td><%= entry.created_at.in_time_zone('Eastern Time (US & Canada)').strftime('%m/%d/%y %I:%M%p') %></td>
+      <td><%= entry.name %></td>
+      <td><%= entry.email %></td>
+      <td><%= entry.sub_type %></td>
       <td><%= entry.recipient %></td>
       <td><%= entry.prefs %></td>
       <td><%= entry.qty %></td>
